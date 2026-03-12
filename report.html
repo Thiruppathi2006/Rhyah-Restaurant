@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rhyah Restaurant — Monthly Report</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="topbar noPrint">
+        <div class="brand">
+          <h1 id="restaurantName">Rhyah Restaurant</h1>
+          <div class="sub">Monthly sales report (paid orders)</div>
+        </div>
+        <nav class="nav">
+          <a class="btn" href="./index.html">Menu</a>
+          <a class="btn" href="./cart.html">Cart</a>
+          <a class="btn" href="./admin.html">Manage Menu</a>
+        </nav>
+      </header>
+
+      <main class="grid" style="grid-template-columns: 1fr; margin-top:18px">
+        <section class="card">
+          <div class="card-h">
+            <h2>Report</h2>
+            <div class="row">
+              <input id="month" class="input" type="month" style="width:180px" />
+              <button id="runBtn" class="btn primary" type="button">Run</button>
+            </div>
+          </div>
+          <div class="card-b">
+            <div class="row" style="gap:16px;flex-wrap:wrap">
+              <div class="chip"><span class="muted">Paid orders</span> <strong id="ordersCount">0</strong></div>
+              <div class="chip"><span class="muted">Revenue</span> <strong id="revenue">₹0.00</strong></div>
+              <div class="chip"><span class="muted">Avg order</span> <strong id="avgOrder">₹0.00</strong></div>
+            </div>
+
+            <div style="margin-top:14px" class="card">
+              <div class="card-h">
+                <h2>Top items</h2>
+                <div class="chip"><span class="muted">by revenue</span></div>
+              </div>
+              <div class="card-b">
+                <div id="topItems"></div>
+                <div id="topEmpty" class="muted" style="display:none">No paid orders in this month.</div>
+              </div>
+            </div>
+
+            <div id="reportMsg" class="muted" style="margin-top:10px"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./assets/js/ui-report.js"></script>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rhyah Restaurant — Monthly Report</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="topbar noPrint">
+        <div class="brand">
+          <h1 id="restaurantName">Rhyah Restaurant</h1>
+          <div class="sub">Monthly sales report (paid orders)</div>
+        </div>
+        <nav class="nav">
+          <a class="btn" href="./index.html">Menu</a>
+          <a class="btn" href="./cart.html">Cart</a>
+          <a class="btn" href="./admin.html">Manage Menu</a>
+        </nav>
+      </header>
+
+      <main class="grid" style="grid-template-columns: 1fr; margin-top:18px">
+        <section class="card">
+          <div class="card-h">
+            <h2>Report</h2>
+            <div class="row">
+              <input id="month" class="input" type="month" style="width:180px" />
+              <button id="runBtn" class="btn primary" type="button">Run</button>
+            </div>
+          </div>
+          <div class="card-b">
+            <div class="row" style="gap:16px;flex-wrap:wrap">
+              <div class="chip"><span class="muted">Paid orders</span> <strong id="ordersCount">0</strong></div>
+              <div class="chip"><span class="muted">Revenue</span> <strong id="revenue">₹0.00</strong></div>
+              <div class="chip"><span class="muted">Avg order</span> <strong id="avgOrder">₹0.00</strong></div>
+            </div>
+
+            <div style="margin-top:14px" class="card">
+              <div class="card-h">
+                <h2>Top items</h2>
+                <div class="chip"><span class="muted">by revenue</span></div>
+              </div>
+              <div class="card-b">
+                <div id="topItems"></div>
+                <div id="topEmpty" class="muted" style="display:none">No paid orders in this month.</div>
+              </div>
+            </div>
+
+            <div id="reportMsg" class="muted" style="margin-top:10px"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./assets/js/ui-report.js"></script>
+  </body>
+</html>
+

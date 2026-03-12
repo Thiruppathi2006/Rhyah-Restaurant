@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rhyah Restaurant — Menu</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="topbar noPrint">
+        <div class="brand">
+          <h1 id="restaurantName">Rhyah Restaurant</h1>
+          <div class="sub">Click an item to add to cart</div>
+        </div>
+        <nav class="nav">
+          <a class="btn" href="./admin.html">Manage Menu</a>
+          <a class="btn" href="./report.html">Monthly Report</a>
+          <a class="btn primary" href="./cart.html">Cart & Bill</a>
+        </nav>
+      </header>
+
+      <main class="grid">
+        <section class="card">
+          <div class="card-h">
+            <h2>Menu</h2>
+            <div class="row grow" style="justify-content:flex-end">
+              <input id="search" class="input" placeholder="Search (e.g., idly, coffee)" style="max-width:320px" />
+            </div>
+          </div>
+          <div class="card-b">
+            <div id="menuGrid" class="menuGrid"></div>
+            <div id="menuEmpty" class="muted" style="display:none;margin-top:10px">No items found.</div>
+          </div>
+        </section>
+
+        <aside class="card">
+          <div class="card-h">
+            <h2>Cart</h2>
+            <div class="chip"><strong id="cartCount">0</strong><span class="muted">items</span></div>
+          </div>
+          <div class="card-b">
+            <div id="cartLines"></div>
+            <div id="cartEmpty" class="muted" style="margin-top:4px">Your cart is empty.</div>
+
+            <div class="totals">
+              <div class="trow"><span class="muted">Subtotal</span><span id="subtotal">₹0.00</span></div>
+              <div class="trow"><span class="muted">Tax</span><span id="tax">₹0.00</span></div>
+              <div class="trow grand"><span>Total</span><span id="total">₹0.00</span></div>
+            </div>
+
+            <div class="row" style="margin-top:12px">
+              <button id="clearCartBtn" class="btn danger" type="button">Clear cart</button>
+              <a class="btn primary" href="./cart.html" style="margin-left:auto">Open cart</a>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="./assets/js/ui-menu.js"></script>
+  </body>
+</html>
+

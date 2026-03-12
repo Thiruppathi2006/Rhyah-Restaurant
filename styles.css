@@ -1,0 +1,184 @@
+:root{
+  --bg:#0b0d12;
+  --card:#131826;
+  --card2:#0f1420;
+  --text:#e9eefc;
+  --muted:#a9b4d0;
+  --border:rgba(255,255,255,.08);
+  --primary:#7c5cff;
+  --danger:#ff4d6d;
+  --ok:#30c48d;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color:var(--text);
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(124,92,255,.25), transparent 60%),
+              radial-gradient(900px 500px at 90% 10%, rgba(48,196,141,.18), transparent 55%),
+              var(--bg);
+}
+
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+
+.container{max-width:1200px;margin:0 auto;padding:20px}
+
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:14px 16px;border:1px solid var(--border);
+  background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  border-radius:14px; box-shadow:var(--shadow);
+}
+.brand{display:flex;flex-direction:column;gap:2px}
+.brand h1{font-size:18px;margin:0;letter-spacing:.2px}
+.brand .sub{font-size:12px;color:var(--muted)}
+
+.nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.chip{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:9px 12px;border:1px solid var(--border);
+  border-radius:999px;background:rgba(255,255,255,.03);
+}
+.chip strong{font-weight:600}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:10px 12px;border-radius:12px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  cursor:pointer;
+}
+.btn.primary{background:rgba(124,92,255,.25);border-color:rgba(124,92,255,.45)}
+.btn.danger{background:rgba(255,77,109,.18);border-color:rgba(255,77,109,.35)}
+.btn.ok{background:rgba(48,196,141,.16);border-color:rgba(48,196,141,.35)}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+
+.grid{
+  margin-top:18px;
+  display:grid;grid-template-columns: 1fr;gap:16px;
+}
+@media (min-width: 980px){
+  .grid{grid-template-columns: 1.35fr .65fr;align-items:start}
+}
+
+.card{
+  border:1px solid var(--border);
+  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.card .card-h{
+  padding:14px 16px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.card .card-h h2{margin:0;font-size:14px;letter-spacing:.2px}
+.card .card-b{padding:14px 16px}
+
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.grow{flex:1}
+.muted{color:var(--muted)}
+
+.input{
+  width:100%;
+  padding:10px 12px;border-radius:12px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.03);
+  color:var(--text);
+  outline:none;
+}
+
+.menuGrid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:12px;
+}
+@media (min-width: 700px){
+  .menuGrid{grid-template-columns: repeat(3, minmax(0, 1fr))}
+}
+@media (min-width: 1100px){
+  .menuGrid{grid-template-columns: repeat(4, minmax(0, 1fr))}
+}
+
+.item{
+  border:1px solid var(--border);
+  background:rgba(0,0,0,.18);
+  border-radius:14px;
+  overflow:hidden;
+  cursor:pointer;
+  transition: transform .08s ease, border-color .12s ease;
+}
+.item:hover{transform: translateY(-2px);border-color:rgba(124,92,255,.55)}
+.item:active{transform: translateY(0)}
+.item img{width:100%;height:120px;object-fit:cover;display:block;background:rgba(255,255,255,.03)}
+.item .meta{padding:10px 10px 12px;display:flex;flex-direction:column;gap:6px}
+.item .name{font-weight:650}
+.item .price{color:var(--muted);font-size:12px}
+.item .badge{
+  align-self:flex-start;
+  font-size:11px;
+  padding:4px 8px;border-radius:999px;
+  background:rgba(48,196,141,.16);
+  border:1px solid rgba(48,196,141,.35);
+}
+.item.unavailable{opacity:.55;cursor:not-allowed}
+.item.unavailable:hover{transform:none;border-color:var(--border)}
+.item.unavailable .badge{background:rgba(255,77,109,.14);border-color:rgba(255,77,109,.3)}
+
+.cartLine{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.10);
+}
+.cartLine:last-child{border-bottom:none}
+.qty{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 8px;border-radius:999px;border:1px solid var(--border);
+  background:rgba(255,255,255,.03);
+}
+.qty button{
+  width:26px;height:26px;border-radius:8px;border:1px solid var(--border);
+  background:rgba(255,255,255,.05);color:var(--text);cursor:pointer;
+}
+.qty .n{min-width:22px;text-align:center}
+
+.totals{
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid var(--border);
+  display:flex;flex-direction:column;gap:8px;
+}
+.totals .trow{display:flex;justify-content:space-between;gap:10px}
+.totals .grand{font-size:16px;font-weight:750}
+
+.receipt{
+  width: 80mm;
+  max-width: 100%;
+  color:#000;
+  background:#fff;
+  padding:10px 10px 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.receipt h3{margin:0 0 4px;font-size:13px;text-align:center}
+.receipt .small{font-size:11px;text-align:center;margin:0 0 8px}
+.receipt .sep{border-top:1px dashed #000;margin:8px 0}
+.receipt .rline{display:flex;justify-content:space-between;gap:10px;font-size:12px}
+.receipt .ritems{margin-top:8px}
+.receipt .ritem{display:flex;justify-content:space-between;gap:10px;font-size:12px}
+.receipt .ritem .left{max-width:60%}
+.receipt .ritem .left div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.receipt .ritem .left .sub{font-size:11px;color:#333}
+.receipt .footer{margin-top:10px;font-size:11px;text-align:center}
+
+@media print{
+  body{background:#fff;color:#000}
+  .noPrint{display:none !important}
+  .container{padding:0;margin:0;max-width:none}
+  .printWrap{display:flex;justify-content:center}
+  .receipt{box-shadow:none;border:none}
+}
+

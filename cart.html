@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rhyah Restaurant — Cart</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="topbar noPrint">
+        <div class="brand">
+          <h1 id="restaurantName">Rhyah Restaurant</h1>
+          <div class="sub">Cart & bill</div>
+        </div>
+        <nav class="nav">
+          <a class="btn" href="./index.html">Back to menu</a>
+          <a class="btn" href="./admin.html">Manage Menu</a>
+          <a class="btn" href="./report.html">Monthly Report</a>
+        </nav>
+      </header>
+
+      <main class="grid" style="grid-template-columns: 1fr">
+        <section class="card">
+          <div class="card-h">
+            <h2>Cart</h2>
+            <div class="chip"><strong id="cartCount">0</strong><span class="muted">items</span></div>
+          </div>
+          <div class="card-b">
+            <div id="cartLines"></div>
+            <div id="cartEmpty" class="muted" style="margin-top:4px">Your cart is empty.</div>
+
+            <div class="totals">
+              <div class="trow"><span class="muted">Subtotal</span><span id="subtotal">₹0.00</span></div>
+              <div class="trow"><span class="muted">Tax</span><span id="tax">₹0.00</span></div>
+              <div class="trow grand"><span>Total</span><span id="total">₹0.00</span></div>
+            </div>
+
+            <div class="row noPrint" style="margin-top:14px">
+              <button id="clearCartBtn" class="btn danger" type="button">Clear cart</button>
+              <button id="printBtn" class="btn" type="button">Print bill</button>
+              <button id="payBtn" class="btn primary" type="button" style="margin-left:auto">Pay now (QR)</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="printWrap" style="margin-top:16px">
+        <div id="receipt" class="receipt" style="display:none"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./assets/js/ui-cart.js"></script>
+  </body>
+</html>
+

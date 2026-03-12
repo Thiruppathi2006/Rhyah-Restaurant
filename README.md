@@ -19,7 +19,7 @@ Because the JS uses ES modules, open via a local static server (recommended).
 ```bash
 python3 -m http.server 8000
 ```
-Then open `http://localhost:8000/index.html`.
+Then open `http://localhost:8000/menu.html`.
 
 ### Option B: Node (if installed)
 ```bash
@@ -27,7 +27,7 @@ npx serve .
 ```
 
 ## Pages
-- `index.html` menu
+- `menu.html` menu
 - `cart.html` cart + totals + pay/print
 - `pay.html` QR + mark paid + print
 - `admin.html` manage menu + settings
